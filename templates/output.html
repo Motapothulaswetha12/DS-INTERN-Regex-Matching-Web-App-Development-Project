@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex Tester - Result</title>
+</head>
+<body>
+    <h1>Regex Tester - Result</h1>
+    <p>Test String: {{ test_string }}</p>
+    <p>Regex Pattern: {{ regex_pattern }}</p>
+    <h2>Matches:</h2>
+    <ul>
+        {% for match in matches %}
+            <li>{{ match }}</li>
+        {% endfor %}
+    </ul>
+    {% if is_valid_email != None %}
+    <h3>Email Validation Result: {{ 'Valid' if is_valid_email else 'Invalid' }}</h3>
+    {% endif %}
+    
+    <a href="/">Back to Home</a>
+</body>
+</html>
